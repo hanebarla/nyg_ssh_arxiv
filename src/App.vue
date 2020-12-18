@@ -33,7 +33,7 @@
     </option>
     </select>,<br/>
     <div v-for="item in show_items" v-bind:video="item" v-bind:key="item.id">
-      {{ item.name }}<br/>
+      <div class="item"><img src="./assets/arxiv_icon.png"><a href="#">{{ item.name }}</a></div>
     </div>
   </div>
 </template>
@@ -154,12 +154,36 @@ export default {
   height: auto;
 }
 
+.item {
+  margin: 0 auto;
+  /*background-color: #dddddd;*/
+  padding: 1px;
+  border: 1px;
+}
+
+.item a{
+  padding: 5px;
+  text-decoration: none;
+  font-size: 120%;
+  color: #2c3e50;
+  margin: 0%;
+}
+
+.item a:hover {
+  color: #000000;
+}
+
+.item img {
+  height: 25px;
+  vertical-align: middle;
+}
+
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  /*-webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;*/
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  margin-top: 30px;
 }
 </style>
